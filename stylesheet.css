@@ -9,7 +9,7 @@ body {
                 margin:0 auto;
                 position:relative;
                 background-color: #349345; 
-                background-image:url(03337_bluemountains_2880x1800.jpg);
+                background-image:url(images/03337_bluemountains_2880x1800.jpg);
                 background-repeat:no-repeat; 
                 background-position:center top;
                 }
@@ -20,7 +20,7 @@ body {
                 margin:0 auto;
                 position:relative;
                 background-color: #199999; 
-                background-image:url(03337_bluemountains_2880x1800.jpg);
+                background-image:url(images/03337_bluemountains_2880x1800.jpg);
                 background-repeat:no-repeat; 
                 background-position:center top;
                 }
@@ -38,7 +38,7 @@ body {
                 left:350px;
         }
 
-        iframe{
+    iframe{
                 position:absolute;
                 position: relative;
                 top:2px;
