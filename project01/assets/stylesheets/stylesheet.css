@@ -1,5 +1,49 @@
 body {
-      background-color: #fff; 
-      margin:0 auto;
-     }
+                background-color: #AAAAAA; 
+                margin:0 auto;
+                }
             
+    .container_1_Title  {
+                width:960px;
+                height:120px;
+                margin:0 auto;
+                position:relative;
+                background-color: #CCCCCC; 
+                }
+
+    .container_2_menubar {
+                width:960px;
+                height:50px;
+                margin:0 auto;
+                position:relative;
+                background-color: #000000; 
+                }
+
+    .container_3_body  {
+                width:960px;
+                height:350px;
+                margin:0 auto;
+                position:relative;
+                background-color: #FCFCFC; 
+                }
+
+    .container_4_CPL  {
+                width:350px;
+                height:90px;
+                margin:0 auto;
+                position:relative;
+                background-color: #F0F0FF; 
+                }
+    .container_5_Subar {
+                width:960px;
+                height:50px;
+                margin:0 auto;
+                position:relative;
+                background-color: #F0F0F0; 
+                }
+                
+     h1 {
+                position:absolute;
+                top:90px;
+                left:350px;
+        }
