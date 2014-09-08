@@ -9,6 +9,8 @@ body {
                 margin:0 auto;
                 position:relative;
                 background-color: #CCCCCC; 
+                border-style: solid;
+                border-width: 2px;
                 }
 
     .container_2_menubar {
@@ -17,31 +19,79 @@ body {
                 margin:0 auto;
                 position:relative;
                 background-color: #000000; 
+                border-style: solid;
+                border-width: 2px;
                 }
 
     .container_3_body  {
                 width:960px;
-                height:350px;
+                height:290px;
                 margin:0 auto;
                 position:relative;
                 background-color: #FCFCFC; 
+                border-style: solid;
+                border-width: 2px;
+                border-bottom-width: 0px;
                 }
 
-    .container_4_CPL  {
-                width:350px;
-                height:90px;
-                margin:0 auto;
-                position:relative;
-                background-color: #F0F0FF; 
-                }
-    .container_5_Subar {
+    
+    .container_4_Subar {
                 width:960px;
                 height:50px;
                 margin:0 auto;
                 position:relative;
+                top: -22;
                 background-color: #F0F0F0; 
+                border-style: solid;
+                border-width: 2px;
+                border-top-width: 0px;
+                }
+
+    .container_5_CPL  {
+                width:350px;
+                height:90px;
+                margin:0 auto;
+                position:relative;
+                top: -350;
+                left:286;
+                background-color: #F0F0FF; 
+                }
+
+    .container_6_Img  {
+                width:180px;
+                height:100px;
+                margin:0 auto;
+                position:relative;
+                top: -330;
+                left:370;
+                background-color: #CCCCCC; 
+                border-style: solid;
+                border-width: 2px;
+                }
+
+     .container_7_hdyft  {
+                width:180px;
+                height:30px;
+                margin:0 auto;
+                position:relative;
+                top: -490;
+                left:-180;
+                background-color: #FFFFFF; 
+                border-style: solid;
+                border-width: 1px;
                 }
                 
+    .container_8_hwyltf {
+                width:270px;
+                height:65px;
+                margin:0 auto;
+                position:relative;
+                top: -465;
+                left:-135;
+                background-color: #FFFFFF; 
+                border-style: solid;
+                border-width: 1px;
+                }
      h1 {
                 position:absolute;
                 top:90px;
