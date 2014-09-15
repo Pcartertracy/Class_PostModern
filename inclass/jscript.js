@@ -1,8 +1,8 @@
+/*<script type="text/javascript" language="javascript">*/
 
-<script type="text/javascript" language="javascript">
 function validateForm(event) 
-  event.preventDefault(); // don't submit the form, because we're going to work with data on the client only.
-
+  event.preventDefault(); 
+  document.getElementByClassName("errors")[0].style.display = "visible";
   var formIsValid = true;
 
   var x = document.forms["myForm"]["fname"].value;
@@ -21,14 +21,14 @@ function validateForm(event)
         formIsValid = false;
 
   if (!formIsValid) {
-      document.getElementById("lname").innerHTML = "First name must be filled out.";
-      document.getElementById("fname").innerHTML = "Last name must be filled out.";
-      document.getElementById("fav_food").innerHTML = "Favorite food must be filled out.";
+      document.getElementsByName("lname").innerHTML = "First name must be filled out.";
+      document.getElementsByName("fname").innerHTML = "Last name must be filled out.";
+      document.getElementsByName("fav_food").innerHTML = "Favorite food must be filled out.";
   } else {
-    function update() {
-      document.getElementById("fullName").innerHTML = document.getElementById("fname").innerHTML;
-      document.getElementById("fillName").innerHTML = document.getElementById("lname").innerHTML ;
-      document.getElementById("favoriteFood").innerHTML = document.getElementById("fav_food").innerHTML;
+      function update() {
+        document.getElementById("fullName").innerHTML = document.getElementsByName("fname").innerHTML;
+        document.getElementById("fillName").innerHTML = document.getElementsByName("lname").innerHTML ;
+        document.getElementById("favoriteFood").innerHTML = document.getElementsByName("fav_food").innerHTML;
     }
   }
 }
@@ -38,4 +38,4 @@ window.onload = function(event) {
   var formNode = document.getElementById("myForm");
   formNode.addEventListener("submit", validateForm, false);
 }
-</script>
+/*</script>*/

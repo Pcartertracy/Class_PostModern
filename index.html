@@ -2,15 +2,37 @@
 	<head> 
 		
 		<link rel="stylesheet" href="assets/stylesheets/stylesheet.css" type="text/css"/>
+		<script type="text/javascript" src="assets/js/greensock/TweenMax.js"></script>
 		<title>The Portfolio of Phillip Carter-Tracy </title>
+
 	<head/> 
 	<body>
-			<div class="container">
-				<h1>The Portfolio of Phillip Carter-Tracy<h1/> 
-				<ul id="trans-nav">
-					<li><a href="glossary.html">glossary</a></li>
-				</ul>
+			<div class="container1">
+    			<div id="logo">
+ 				</div> 
 			</div>
+			<div class="container2">
+				<input type="button" id="btn" value="Move Logo">	
+  				<div id="demo">
+   				    <div class="box green"></div>
+    				<div class="box grey"></div>
+    				<div class="box orange"></div>
+    				<div class="box green"></div>
+    				<div class="box grey"></div>
+    				<div class="box orange"></div>
+    				<div class="box green"></div>
+    				<div class="box grey"></div>
+    				<div class="box orange"></div>
+ 				 </div>		
+ 			</div>
 			
 	</body>
+	<script>
+		TweenMax.staggerTo(".box", 1, {scale:0.2,rotation:360, y:100}, 0.5);
+		TweenLite.to(".box", 3, {left:"220px"});
+		TweenLite.to(".container1", 3, {backgroundColor:"e47d32"});
+		btn.onclick = function() {
+        TweenLite.to(logo, 0.5, {left:"+=100px"});
+   		 };
+	</script>
 

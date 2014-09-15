@@ -1,47 +1,88 @@
-body {
-                background-color: #fff; 
-                margin:0 auto;
-                }
-            
-    .container  {
+    .container2  {
                 width:960px;
                 height:800px;
                 margin:0 auto;
                 position:relative;
-                background-color: #349345; 
-                background-image:url (../images/03337_bluemountains_2880x1800.jpg);
+                background-image:url ();
                 background-image: inherit;
                 background-repeat:no-repeat; 
                 background-position:center top;
                 }
 
-    .container_2  {
+    .container1  {
                 width:960px;
-                height:800px;
+                height:100px;
                 margin:0 auto;
                 position:relative;
-                background-color: #199999; 
-                background-image:url (../images/03337_bluemountains_2880x1800.jpg);
+                background-color: #f5aa59; 
+                background-image:url ();
+                background-image: inherit;
                 background-repeat:no-repeat; 
                 background-position:center top;
                 }
+
+    body {
+                font-family: "Asap", sans-serif;
+                color:#989898;
+                margin:0 10px;
+                font-size:16px;
+                }
+              
+    h1, h2, h3 {
+                font-family: "Signika Negative", sans-serif;
+                margin: 10px 0 10px 0;
+                color:#f3f2ef;
+              }
+              
+    h1 { 
+                font-size:36px;
+              }
+              
+    h2 {
+                font-size:30px;
+              }
+              
+    h3 {
+                font-size:24px;
+              }
+              
+    p{
+                line-height:22px;
+                margin-bottom:16px;
+                width:650px;
+              }
+              
+    #demo {
+                height:100%;
+                position:relative;
+              } 
+
+    .box {
+                width:50px;
+                height:50px;
+                position:relative;
+                border-radius:6px;
+                margin-top:4px;
+                display:inline-block
+              }
+              
+    .green{
+                background-color:#6fb936;
+              }
+              
+    .orange {
+                background-color:#f38630;
+              }
+    .grey {
+                background-color:#989898;
+              }
+    #logo {
+                position:relative;                
+                width: 300px;
+                height: 100px;
+                background: url(../images/tempLogo.png) no-repeat;
+              }
+    #btn {
+                position:relative;
                 
-     h1 {
-                position:absolute;
-                top:90px;
-                left:350px;
-        }
-
-
-     h2 {
-                position:absolute;
-                top:90px;
-                left:350px;
-        }
-
-    iframe{
-                position:absolute;
-                position: relative;
-                top:2px;
-                left:40px;
-                } 
+              }
