@@ -1,6 +1,6 @@
-<?php include("header.php"); ?>
+<? include("header.php"); ?>
     <div class="contact">
-      <h2>Send e-mail to phillip.cartertracy@gmail.com:</h2>
+      <h2>Send e-mail to Phillip:</h2>
       <form action="MAILTO:phillip.cartertracy@gmail.com" method="post" enctype="text/plain">
       	Name:<br>
       	<input type="text" name="name" value="your name"><br>
@@ -12,9 +12,9 @@
       	<input type="reset" value="Reset">
       </form>
     </div>
-    <?php 
+    <?
  	 if(isset($_POST['submit'])){
- 	   $to = "phillip.cartertracy@gmail"; 
+ 	   $to = "contact.php,"; 
  	   $from = $_POST['email']; // sender's Email address not mine
  	   $name = $_POST['name'];
  	   $message = $name. "\n\n" . $_POST['comment'];
@@ -22,6 +22,6 @@
 	   echo "Mail Sent. Thank you " . $name . ", we will contact you shortly.";  
 	   }
   	?>
-<?php include("footer.php"); ?>
+<? include("footer.php"); ?>
 
   
