@@ -14,12 +14,12 @@
     </div>
     <?
  	 if(isset($_POST['submit'])){
- 	   $to = "contact.php,"; 
+ 	   $to = "contact.php"; 
  	   $from = $_POST['email']; // sender's Email address not mine
  	   $name = $_POST['name'];
  	   $message = $name. "\n\n" . $_POST['comment'];
 	   mail($to,$message);
-	   echo "Mail Sent. Thank you " . $name . ", we will contact you shortly.";  
+	   echo "Mail Sent. Thank you " . $name ;  
 	   }
   	?>
 <? include("footer.php"); ?>
