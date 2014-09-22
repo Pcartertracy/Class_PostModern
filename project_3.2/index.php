@@ -7,6 +7,7 @@ include("header.php");
 ?> 
 
 <h2>My Films</h2>
+<h3><a href="addFilm.php">Add a film</a></h3>
 Select a film to edit or delete or <a herf="addFilm.php"> add new film</a> 
 <table id="home"> 
 
