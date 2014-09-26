@@ -20,7 +20,14 @@ class AlbumApp
 
 	def render_list(request) 
 		response = Rack::Response.new 
-		File.open("top_100_albums.txt", "rb") { |file| response.write(file.read)} 
+		songs = []
+			File.open("top_100_albums.txt", "rb") do |f| 
+  			f.each_line.each do |line|
+    		songs << line.split.map(&:to_i)
+    		/File.readlines("top_100_albums.txt", "rb") { |file| response.write(file.read)} /
+  			end
+		end
+		puts songs.inspect
 		response.finish 
 	end 
 
