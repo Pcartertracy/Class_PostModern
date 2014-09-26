@@ -23,6 +23,7 @@ class AlbumApp
 		data = []
 		File.open("top_100_albums.txt", "rb") do |f|
   			f.each_line do |line|
+  				line.chomp!
     			data << line.split(", ")
   			end
 		end
@@ -31,7 +32,21 @@ class AlbumApp
 			songs << [i + 1, a[0], a[1]]
 		end
 
-		response.write(songs.inspect)
+		if (request.params["order"] == "name")
+			songs.sort! do |l, r| 
+				l[1] <=> r[1]
+			end	
+		elsif (request.params["order"] == "year")
+			songs.sort! do |l, r| 
+				l[2] <=> r[2]
+			end
+		end
+
+		# TODO: render top html
+		songs.each do |song|
+			response.write("<tr>\n<td>#{song[0]}</td><td>#{song[1]}</td><td>#{song[2]}</td>\n</tr>\n")
+		end
+		# TODO: render bottom html
 		response.finish 
 	end 
 
