@@ -20,16 +20,21 @@ class AlbumApp
 
 	def render_list(request) 
 		response = Rack::Response.new 
-		songs = []
-			File.open("top_100_albums.txt", "rb") do |f| 
+		data = []
+		File.open("top_100_albums.txt", "rb") do |f|
   			f.each_line do |line|
-    		songs << line.split(", ")
-    		/File.readlines("top_100_albums.txt", "rb") { |file| response.write(file.read)} /
+    			data << line.split(", ")
   			end
 		end
-		puts songs.inspect
+		songs = []
+		data.each_with_index do |a, i|
+			songs << [i + 1, a[0], a[1]]
+		end
+
+		response.write(songs.inspect)
 		response.finish 
 	end 
+
 
 	def render_404 
 		[404, {"Content-Type" => "text/plain"},["nothing here!"]]
@@ -37,3 +42,6 @@ class AlbumApp
 end 
 
 Rack::Handler::WEBrick.run AlbumApp.new, :Port => 8080 
+
+
+/File.readlines("top_100_albums.txt", "rb") { |file| response.write(file.read)} /
