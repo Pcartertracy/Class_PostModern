@@ -22,8 +22,8 @@ class AlbumApp
 		response = Rack::Response.new 
 		songs = []
 			File.open("top_100_albums.txt", "rb") do |f| 
-  			f.each_line.each do |line|
-    		songs << line.split.map(&:to_i)
+  			f.each_line do |line|
+    		songs << line.split(", ")
     		/File.readlines("top_100_albums.txt", "rb") { |file| response.write(file.read)} /
   			end
 		end
