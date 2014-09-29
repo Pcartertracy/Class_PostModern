@@ -42,11 +42,12 @@ class AlbumApp
 			end
 		end
 
-		# TODO: render top html
+		File.open("list.html", "rb") { |list| response.write(list.read)} 
 		songs.each do |song|
+			# TODO 3: highlighting
 			response.write("<tr>\n<td>#{song[0]}</td><td>#{song[1]}</td><td>#{song[2]}</td>\n</tr>\n")
 		end
-		# TODO: render bottom html
+		File.open("listBottem.html", "rb") { |list| response.write(list.read)}
 		response.finish 
 	end 
 
