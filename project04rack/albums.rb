@@ -47,8 +47,9 @@ class AlbumApp
 
 		File.open("list.html", "rb") { |list| response.write(list.read)} 
 		songs.each do |song|
-			response.write("\t<tr class=\"selected\">\n" : "\t<tr>\n")
+			/response.write("\t<tr class=\"selected\">\n" : "\t<tr>\n")/
 			response.write("<tr>\n<td>#{song[0]}</td><td>#{song[1]}</td><td>#{song[2]}</td>\n</tr>\n")
+			/response.write("<tr>\n<td>#{album.rank]}</td><td>#{album.name}</td><td>#{album.year}</td>\n</tr>\n")/
 		end
 		File.open("listBottem.html", "rb") { |list| response.write(list.read)}
 		response.finish 
