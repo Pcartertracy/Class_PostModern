@@ -3,7 +3,7 @@ class Album
 
 	def init(rank, str)
 		@rank = rank 
-		@title = 
-		@year = 
+		@title = title
+		@year = year
 	end
 end 
