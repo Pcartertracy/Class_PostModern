@@ -1,4 +1,7 @@
 require 'rack'
+/require_relative 'album'/
+
+
 
 class AlbumApp 
 	def call(env)
@@ -44,20 +47,17 @@ class AlbumApp
 
 		File.open("list.html", "rb") { |list| response.write(list.read)} 
 		songs.each do |song|
-			# TODO 3: highlighting
+			response.write("\t<tr class=\"selected\">\n" : "\t<tr>\n")
 			response.write("<tr>\n<td>#{song[0]}</td><td>#{song[1]}</td><td>#{song[2]}</td>\n</tr>\n")
 		end
 		File.open("listBottem.html", "rb") { |list| response.write(list.read)}
 		response.finish 
 	end 
 
-
 	def render_404 
 		[404, {"Content-Type" => "text/plain"},["nothing here!"]]
 	end 
+
 end 
 
 Rack::Handler::WEBrick.run AlbumApp.new, :Port => 8080 
-
-
-/File.readlines("top_100_albums.txt", "rb") { |file| response.write(file.read)} /
