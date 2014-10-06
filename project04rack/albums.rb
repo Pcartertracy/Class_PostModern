@@ -30,26 +30,19 @@ class AlbumApp
 		response = Rack::Response.new 
 
 		data = []
+
 		#SQLITE
 		SQLite3::Database.open( "albums.sqlite3.db" ) do |db|
   			db.execute( "SELECT * FROM albums" ) do |row|
-   				 puts row
+   				# puts row
    				 data << row
   			end
 		end
 
-		#File.open("top_100_albums.txt", "rb") do |f|
-  		#	f.each_line do |line|
-  		#		line.chomp!
-    	#		data << line.split(", ")
-  		#	end 
-		#end #--> 
-
-		#maps
 		albums = []
 
 		data.each_with_index do |a, i|
-		   albums << Album.new( a[0], a[1], a[2])  # might have to change per SQLite 
+		   albums << Album.new( a[0], a[1], a[2])  # change per SQLite 
 		end
 
 		if (request.params["order"] == "name")
