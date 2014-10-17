@@ -1,0 +1,10 @@
+
+	<table>
+ 	<% albums.each do |album| %>
+			<tr <%= album.rank == request.params["rank"].to_i ? "class=\"selected\"" : "" %>>
+				<td><%= album.rank %></td>
+				<td><%= album.title %></td>
+				<td><%= album.year %></td>
+			</tr>
+		<%end%>
+	</table>

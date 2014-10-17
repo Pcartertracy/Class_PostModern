@@ -1,0 +1,18 @@
+
+	<form action="/list" method="POST">  
+		<label FOR "order"> Sort by</label>
+		<select name="order"> 
+			<option value="rank">Rank (default)</option>
+			<option value="title">Name</option>
+			<option value="year">Year</option>
+		</select> 
+	<label for"rank">Select a rank to highlight</label>
+		<select name="rank">
+
+		<%(1..100).each do |i|%> 
+		<option value="<%=i%>"><%= i %></option>
+		<%end%>
+		
+		</select>
+		<input type="submit" value="Display List"/>
+	</form>	
