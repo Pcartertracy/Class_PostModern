@@ -1,7 +1,4 @@
-Rails.application.routes.draw do
-  resources :posts
-  
-  resources :sound_bites do 
+Rails.application.routes.draw do  resources :sound_bites do 
     resources :posts
   end
 

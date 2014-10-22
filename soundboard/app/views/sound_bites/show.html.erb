@@ -23,15 +23,8 @@
 <%= link_to 'Edit', edit_sound_bite_path(@sound_bite) %> |
 <%= link_to 'Back', sound_bites_path %> 
 
-<H4>Posts</H4>
-	<div id="posts">
-		<%= render :partial => @sound_bite.posts%> 
-	</div>
+<h2>Comments</h2>
+	<% @sound_bite.comments.each do |comment| %> 
+	<p> <%= comment.body %></p>
+<%end%> 
 
-		<%= simple_form_for [@sound_bite, Posts.new] do |f| %> 
-
-		<p>
-			<%=f.input :body, :label => "New Post", as: :text, input_html: { rows:"3"}%>
-		</p>
-		<p><%=f.submit "add post",class: "btn btn-primary"%></p>
-	<%end%> 
