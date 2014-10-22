@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :posts
+  
+  resources :sound_bites do 
+    resources :posts
+  end
+
   resources :sound_bites
 
   # The priority is based upon order of creation: first created -> highest priority.
